@@ -1,0 +1,14 @@
+(* 2進数表示 *)
+Bin[m_] := Module[{b, q, r},
+  (* 自然数mに対し、その2進数表示を求める *)
+  (* :pram m: <int> 整数; *)
+  (* :return: <int> mの2進数表示; *)
+  b = {};
+  {q, r} = QuotientRemainder[m, 2];
+  PrependTo[b, r];
+  While[q != 0,
+    {q, r} = QuotientRemainder[q, 2];
+    PrependTo[b, r];
+  ];
+  Return[b];
+];
