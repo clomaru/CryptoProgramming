@@ -1,4 +1,4 @@
-def bin(q):
+def to_bin(q):
     '''
     自然数mに対し、その2進数表示を求める
     :pram m: <int> 整数
@@ -14,4 +14,4 @@ def bin(q):
 
 if __name__ == '__main__':
     num = int(input())
-    print(bin(num))
+    print(to_bin(num))
